@@ -14,6 +14,11 @@ const port = 3000
 
 app.use(cors())
 
+app.get('/', (req, res) => {
+    console.log('/ path activated ', req.query)
+    res.send('/ path activated')
+})
+
 app.get('/search-hunters', (req, res) => {
     console.log('req received, query params: ', req.query)
     handler(req).then((response) => res.send(response))

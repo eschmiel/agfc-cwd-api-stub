@@ -12,22 +12,22 @@ const fs = require('fs')
 const app = express()
 const port = 3000
 
-const key = fs.readFileSync(`selfsigned.key`)
-const cert = fs.readFileSync(`selfsigned.crt`)
-const options = {
-    key,
-    cert
-}
+// const key = fs.readFileSync(`selfsigned.key`)
+// const cert = fs.readFileSync(`selfsigned.crt`)
+// const options = {
+//     key,
+//     cert
+// }
 
 app.get('/', (req, res) => {
     console.log('req received, query params: ', req.query)
     res.send('Hello World!s')
 })
 
-https.createServer(options, app).listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
-
-// app.listen(port, () => {
+// https.createServer(options, app).listen(port, () => {
 //     console.log(`Example app listening on port ${port}`)
 // })
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})

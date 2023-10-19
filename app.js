@@ -12,8 +12,8 @@ const fs = require('fs')
 const app = express()
 const port = 3000
 
-const key = fs.readFileSync(__dirname + `/../selfsigned.key`)
-const cert = fs.readFileSync(__dirname + `/../selfsigned.crt`)
+const key = fs.readFileSync(__dirname + `./selfsigned.key`)
+const cert = fs.readFileSync(__dirname + `./selfsigned.crt`)
 const options = {
     key,
     cert

@@ -24,10 +24,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!s')
 })
 
-// https.createServer(options, app).listen(port, () => {
-//     console.log(`Example app listening on port ${port}`)
-// })
-
-app.listen(port, () => {
+https.createServer(options, app).listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`)
+// })

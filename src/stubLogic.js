@@ -17,6 +17,9 @@ const handler = async (request) => {
     if (!employeeID || employeeID.length < 3) return badRequestResponse(`An employeeID query parameter with at least 3 characters must be set`)
     if (!dateOfCollectionStart) return badRequestResponse(`A dateOfCollectionStart query parameter without a timestamp must be set`)
     if (!gameCheckID && !hunterCID && !lastName) return badRequestResponse(`A gameCheckID, hunterCID or last name query parameter must be set`)
+    if (!validateMiniumLength(gameCheckID)) return badRequestResponse('gameCheckID query parameter must have at least 3 digits')
+    if (!validateMiniumLength(hunterCID)) return badRequestResponse('hunterCID query parameter must have at least 3 digits')
+
     if (gameCheckID === '0') return serverErrorResponse(`test server error response`)
 
     switch (gameCheckID) {
@@ -145,6 +148,11 @@ const serverErrorResponse = (error) => {
         statusCode: 500,
         body: error
     }
+}
+
+const validateMiniumLength = (value) => {
+    if (value && value.length && value.length < 3) return false
+    return true
 }
 
 module.exports = { handler }

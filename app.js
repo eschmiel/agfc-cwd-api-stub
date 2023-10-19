@@ -9,9 +9,11 @@
 const express = require('express')
 const https = require('https')
 const fs = require('fs')
+const cors = require('cors')
 const app = express()
 const port = 3000
 
+app.use(cors())
 // const key = fs.readFileSync(`selfsigned.key`)
 // const cert = fs.readFileSync(`selfsigned.crt`)
 // const options = {

@@ -3,32 +3,21 @@
 // PM docs: https://www.npmjs.com/package/pm2
 // Server IP: http://54.86.94.159/
 
-// Look into this for setting up https
-// https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
+// Using API Gateway allowed us to get a proper ssl cert and domain in place for https
+// https://codethief.io/aws-connect-api-gateway-to-ec2/
 
 const express = require('express')
-const https = require('https')
-const fs = require('fs')
 const cors = require('cors')
+const { handler } = require('./src/stubLogic')
 const app = express()
 const port = 3000
 
 app.use(cors())
-// const key = fs.readFileSync(`selfsigned.key`)
-// const cert = fs.readFileSync(`selfsigned.crt`)
-// const options = {
-//     key,
-//     cert
-// }
 
-app.get('/', (req, res) => {
+app.get('/search-hunters', (req, res) => {
     console.log('req received, query params: ', req.query)
-    res.send('Hello World!s')
+    handler(req).then((response) => res.send(response))
 })
-
-// https.createServer(options, app).listen(port, () => {
-//     console.log(`Example app listening on port ${port}`)
-// })
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

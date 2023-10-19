@@ -1,17 +1,21 @@
 const handler = async (request) => {
     const {
+        employeeID,
+        dateOfCollectionStart,
         gameCheckID,
         hunterCID,
         lastName,
         middleInitial,
         firstName,
         cervidSex,
-        dateOfCollectionStart,
         dateOfCollectionEnd,
-        county
+        county,
+        cooperatorID
     } = request.query
     const responseData = []
 
+    if (!employeeID || employeeID.length < 3) return badRequestResponse(`An employeeID query parameter with at least 3 characters must be set`)
+    if (!dateOfCollectionStart) return badRequestResponse(`A dateOfCollectionStart query parameter without a timestamp must be set`)
     if (!gameCheckID && !hunterCID && !lastName) return badRequestResponse(`A gameCheckID, hunterCID or last name query parameter must be set`)
     if (gameCheckID === '0') return serverErrorResponse(`test server error response`)
 
@@ -31,7 +35,7 @@ const handler = async (request) => {
                     gameCheckID: '00000001',
                     hunterCID: '87654321',
                     countyOfHarvest: 'Clark',
-                    dateOfCollection: '2022-12-05T14:0:00.000Z',
+                    dateOfCollection: '2022-12-05',
                     cervidSex: 'Unknown'
                 }
             })
@@ -50,7 +54,7 @@ const handler = async (request) => {
                 gameCheckID: '00000002',
                 hunterCID: '43214321',
                 countyOfHarvest: 'Chicot',
-                dateOfCollection: '2023-10-05T14:0:00.000Z',
+                dateOfCollection: '2023-10-05',
                 cervidSex: 'Female'
             })
             break
@@ -58,7 +62,7 @@ const handler = async (request) => {
     }
 
     switch (hunterCID) {
-        case '1':
+        case '123':
             responseData.push({
                 contactFirstName: 'Sam',
                 contactMiddleInitial: 'F',
@@ -70,13 +74,13 @@ const handler = async (request) => {
                 contactState: 'Michigan',
                 contactZipCode: '11111',
                 gameCheckID: '12312312',
-                hunterCID: '1',
+                hunterCID: '123',
                 countyOfHarvest: 'Baxter',
-                dateOfCollection: '2022-11-05T14:0:00.000Z',
+                dateOfCollection: '2022-11-05',
                 cervidSex: 'Male'
             })
             break
-        case '2':
+        case '321':
             responseData.push({
                 contactFirstName: 'Lois',
                 contactMiddleInitial: 'L',
@@ -88,9 +92,9 @@ const handler = async (request) => {
                 contactState: 'Ohio',
                 contactZipCode: '22222',
                 gameCheckID: '00000003',
-                hunterCID: '2',
+                hunterCID: '321',
                 countyOfHarvest: 'Ashley',
-                dateOfCollection: '2022-10-05T14:0:00.000Z',
+                dateOfCollection: '2022-10-05',
                 cervidSex: 'Male'
             })
             break

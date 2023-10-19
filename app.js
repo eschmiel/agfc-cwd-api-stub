@@ -3,15 +3,27 @@
 // PM docs: https://www.npmjs.com/package/pm2
 // Server IP: http://54.86.94.159/
 
+// Look into this for setting up https
+// https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
+
 const express = require('express')
+const https = require('https')
+const fs = require('fs')
 const app = express()
 const port = 3000
+
+const key = fs.readFileSync(__dirname + `/../selfsigned.key`)
+const cert = fs.readFileSync(__dirname + `/../selfsigned.crt`)
+const options = {
+    key,
+    cert
+}
 
 app.get('/', (req, res) => {
     console.log('req received, query params: ', req.query)
     res.send('Hello World!s')
 })
 
-app.listen(port, () => {
+https.createServer(options, app).listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })

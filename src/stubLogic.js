@@ -1,6 +1,5 @@
 const handler = async (request) => {
     const {
-        employeeID,
         dateOfCollectionStart,
         gameCheckID,
         hunterCID,
@@ -14,7 +13,6 @@ const handler = async (request) => {
     } = request.query
     const responseData = []
 
-    if (!employeeID || employeeID.length < 3) return badRequestResponse(`An employeeID query parameter with at least 3 characters must be set`)
     if (!dateOfCollectionStart) return badRequestResponse(`A dateOfCollectionStart query parameter without a timestamp must be set`)
     if (!gameCheckID && !hunterCID && !lastName) return badRequestResponse(`A gameCheckID, hunterCID or last name query parameter must be set`)
     if (!validateMiniumLength(gameCheckID)) return badRequestResponse('gameCheckID query parameter must have at least 3 digits')

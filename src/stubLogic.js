@@ -23,22 +23,20 @@ const handler = async (request) => {
     switch (gameCheckID) {
         case '00000001':
             responseData.push({
-                validData: {
-                    contactFirstName: 'Chris',
-                    contactMiddleInitial: 'T',
-                    contactLastName: 'Markley',
-                    contactEmail: 'chris@internet.com',
-                    contactPhone: ' 123-123-1234',
-                    contactAddress: '123 Test Street',
-                    contactCity: 'Test City',
-                    contactState: 'Arkansas',
-                    contactZipCode: '12345',
-                    gameCheckID: '00000001',
-                    hunterCID: '87654321',
-                    countyOfHarvest: 'Clark',
-                    dateOfCollection: '2022-12-05',
-                    cervidSex: 'Unknown'
-                }
+                contactFirstName: 'Chris',
+                contactMiddleInitial: 'T',
+                contactLastName: 'Markley',
+                contactEmail: 'chris@internet.com',
+                contactPhone: ' 123-123-1234',
+                contactAddress: '123 Test Street',
+                contactCity: 'Test City',
+                contactState: 'Arkansas',
+                contactZipCode: '12345',
+                gameCheckID: '00000001',
+                hunterCID: '87654321',
+                countyOfHarvest: 'Clark',
+                dateOfCollection: '2022-12-05',
+                cervidSex: 'Unknown'
             })
             break
         case '00000002':

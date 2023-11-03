@@ -2,6 +2,8 @@
 // https://betterprogramming.pub/deploying-a-basic-express-api-on-amazon-ec2-eea0b54a825
 // PM docs: https://www.npmjs.com/package/pm2
 // Server IP: http://54.86.94.159/
+// Command to access locally is: ssh -i agfc-cwd-api-stub-key.pem ubuntu@54.86.94.159
+// Run from the users/eric.schmiel/downloads folder 
 
 // Using API Gateway allowed us to get a proper ssl cert and domain in place for https
 // https://codethief.io/aws-connect-api-gateway-to-ec2/

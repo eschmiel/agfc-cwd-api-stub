@@ -122,6 +122,183 @@ const handler = async (request) => {
         default:
     }
 
+    switch (firstName) {
+        case 'Pablo':
+            responseData.push({
+                contactFirstName: 'Pablo',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'pSmith@Wesson.com',
+                contactPhone: '1234567890',
+                contactAddress: '33 High Road',
+                contactCity: "Test Town",
+                contactState: 'Idaho',
+                contactZipCode: '11111',
+                gameCheckID: '00000005',
+                hunterCID: '23467',
+                countyOfHarvest: 'Baxter',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
+    switch (middleInitial) {
+        case 'M':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'M',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Baxter',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
+    switch (cervidSex) {
+        case 'Male':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Baxter',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Male'
+            })
+            break
+        default:
+    }
+
+    switch (county) {
+        case 'Chicot':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Chicot',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
+    switch (dateOfCollectionStart) {
+        case '11/03/2023':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Baxter',
+                dateOfCollection: '2023-11-03T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
+    switch (dateOfCollectionEnd) {
+        case '11/02/2023':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Baxter',
+                dateOfCollection: '2023-11-02T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
+    switch (cooperatorID) {
+        case '14':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: ' 333-333-3333',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Chicot',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Unknown',
+                cooperator: '14'
+            })
+            break
+        default:
+    }
+
+    switch (phone) {
+        case '0987654321':
+            responseData.push({
+                contactFirstName: 'Stan',
+                contactMiddleInitial: 'O',
+                contactLastName: 'Smith',
+                contactEmail: 'Smith@Wesson.com',
+                contactPhone: '0987654321',
+                contactAddress: '33 Low Avenue',
+                contactCity: "Flannegan's Pond",
+                contactState: 'Ohio',
+                contactZipCode: '33333',
+                gameCheckID: '00000004',
+                hunterCID: '2346',
+                countyOfHarvest: 'Chicot',
+                dateOfCollection: '2022-11-07T14:0:00.000Z',
+                cervidSex: 'Unknown'
+            })
+            break
+        default:
+    }
+
     return successResponse(responseData)
 }
 

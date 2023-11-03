@@ -9,7 +9,8 @@ const handler = async (request) => {
         cervidSex,
         dateOfCollectionEnd,
         county,
-        cooperatorID
+        cooperatorID,
+        phone
     } = request.query
     const responseData = []
 

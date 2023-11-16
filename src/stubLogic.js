@@ -15,7 +15,7 @@ const handler = async (request) => {
     const responseData = []
 
     if (!dateOfCollectionStart) return badRequestResponse(`A dateOfCollectionStart query parameter without a timestamp must be set`)
-    if (!gameCheckID && !hunterCID && !lastName) return badRequestResponse(`A gameCheckID, hunterCID or last name query parameter must be set`)
+    if (!gameCheckID && !hunterCID && !lastName && !phone) return badRequestResponse(`A gameCheckID, hunterCID, phone or lastName query parameter must be set`)
     if (!validateMiniumLength(gameCheckID)) return badRequestResponse('gameCheckID query parameter must have at least 3 digits')
     if (!validateMiniumLength(hunterCID)) return badRequestResponse('hunterCID query parameter must have at least 3 digits')
 

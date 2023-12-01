@@ -58,6 +58,24 @@ const handler = async (request) => {
                 cervidSex: 'Female'
             })
             break
+        case '88888888':
+            responseData.push({
+                contactFirstName: 'Travis',
+                contactMiddleInitial: 'T',
+                contactLastName: 'Walters',
+                contactEmail: 'traviswltrs@yahoo.com',
+                contactPhone: '123-456-7890',
+                contactAddress: '123 Travis Road',
+                contactCity: 'Travis Town',
+                contactState: 'Florida',
+                contactZipCode: '11111',
+                gameCheckID: '88888888',
+                hunterCID: '88228822',
+                countyOfHarvest: 'Arkansas',
+                dateOfCollection: '2023-12-20',
+                cervidSex: 'Female'
+            })
+            break
         default:
     }
 

@@ -76,6 +76,24 @@ const handler = async (request) => {
                 cervidSex: 'Female'
             })
             break
+        case '77777777':
+            responseData.push({
+                contactFirstName: 'Maya',
+                contactMiddleInitial: 'T',
+                contactLastName: 'Bowens',
+                contactEmail: 'maya.bowens@timmons.com',
+                contactPhone: '098-765-4321',
+                contactAddress: '098 Maya Street',
+                contactCity: 'Mayaville',
+                contactState: 'Virginia',
+                contactZipCode: '222222',
+                gameCheckID: '77777777',
+                hunterCID: '123321',
+                countyOfHarvest: 'Arkansas',
+                dateOfCollection: '2023-12-25',
+                cervidSex: 'Male'
+            })
+            break
         default:
     }
 

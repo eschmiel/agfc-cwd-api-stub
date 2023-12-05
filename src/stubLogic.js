@@ -94,6 +94,23 @@ const handler = async (request) => {
                 cervidSex: 'Male'
             })
             break
+        case '55555555':
+            responseData.push({
+                contactFirstName: 'AJ',
+                contactLastName: 'Riggs',
+                contactEmail: 'a.j.riggs@agfc.ar.gov',
+                contactPhone: '654-654-6543',
+                contactAddress: '342 AJ Avenue',
+                contactCity: 'AJ Town',
+                contactState: 'Arkansas',
+                contactZipCode: '54321',
+                gameCheckID: '55555555',
+                hunterCID: '76534',
+                countyOfHarvest: 'Arkansas',
+                dateOfCollection: '2023-11-18',
+                cervidSex: 'Male'
+            })
+            break
         default:
     }
 

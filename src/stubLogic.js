@@ -86,7 +86,7 @@ const handler = async (request) => {
                 contactAddress: '098 Maya Street',
                 contactCity: 'Mayaville',
                 contactState: 'Virginia',
-                contactZipCode: '222222',
+                contactZipCode: '22222',
                 gameCheckID: '77777777',
                 hunterCID: '123321',
                 countyOfHarvest: 'Arkansas',

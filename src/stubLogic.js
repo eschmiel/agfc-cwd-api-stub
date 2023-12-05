@@ -81,7 +81,7 @@ const handler = async (request) => {
                 contactFirstName: 'Maya',
                 contactMiddleInitial: 'T',
                 contactLastName: 'Bowens',
-                contactEmail: 'maya.bowens@timmons.com',
+                contactEmail: 'testertestingson6@gmail.com',
                 contactPhone: '098-765-4321',
                 contactAddress: '098 Maya Street',
                 contactCity: 'Mayaville',

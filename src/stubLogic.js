@@ -58,6 +58,24 @@ const handler = async (request) => {
                 cervidSex: 'Female'
             })
             break
+        case '99999999':
+            responseData.push({
+                contactFirstName: 'Eric',
+                contactMiddleInitial: 'T',
+                contactLastName: 'Schmiel',
+                contactEmail: 'eschmiel@gmail.com',
+                contactPhone: '098-765-4321',
+                contactAddress: '098 Schmiel Street',
+                contactCity: 'Schmiel Town',
+                contactState: 'Virginia',
+                contactZipCode: '22222',
+                gameCheckID: '99999999',
+                hunterCID: '765423',
+                countyOfHarvest: 'Arkansas',
+                dateOfCollection: '2023-12-25',
+                cervidSex: 'Male'
+            })
+            break
         case '88888888':
             responseData.push({
                 contactFirstName: 'Travis',

@@ -15,15 +15,17 @@ const app = express()
 const port = 3000
 
 // app.use(cors())
+app.use(function (req, res, next) {
 
+    res.set({ 'Access-Control-Allow-Origin': '*' })
+    next()
+})
 app.get('/', (req, res) => {
     console.log('/ path activated ', req.query)
     res.send('/ path activated')
 })
 
 app.get('/search-hunters', (req, res) => {
-
-    res.set({ 'Access-Control-Allow-Origin': '*' })
     console.log('req received, query params: ', req.query)
     handler(req).then((response) => {
         res.send(response)

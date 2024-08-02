@@ -14,25 +14,37 @@ const { handler } = require('./src/stubLogic')
 const app = express()
 const port = 3000
 
+// We were previously using this cors middleware to handle the CORS process
+// but I disabled it so I could create and share a more direct solution to our
+// issue. - EGS 8/2/24
 // app.use(cors())
-app.use(function (req, res, next) {
-
-    res.set({
+app.use(function (request, response, next) {
+    response.set({
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'authorization'
+        'Access-Control-Allow-Headers': 'authorization',
+        'Access-Control-Allow-Credentials': 'true'
     })
     next()
 })
-app.get('/', (req, res) => {
-    console.log('/ path activated ', req.query)
-    res.send('/ path activated')
-})
 
+// This was the endpoint we had setup to simulate the AGFC restAPI.
+// The actual endpoint url we hit is different.
 app.get('/search-hunters', (req, res) => {
     console.log('req received, query params: ', req.query)
     handler(req).then((response) => {
         res.send(response)
     })
+})
+
+
+
+
+
+
+
+app.get('/', (req, res) => {
+    console.log('/ path activated ', req.query)
+    res.send('/ path activated')
 })
 
 app.listen(port, () => {

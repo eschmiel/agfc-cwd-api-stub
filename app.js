@@ -17,8 +17,7 @@ const port = 3000
 // app.use(cors())
 app.use(function (req, res, next) {
 
-    res.set({ 'Access-Control-Allow-Origin': '*' })
-    res.set({ 'Allow': 'GET,HEAD,OPTIONS' })
+    res.set({ 'Access-Control-Allow-Origin': '*', 'Allow': 'GET,HEAD,OPTIONS' })
     next()
 })
 app.get('/', (req, res) => {

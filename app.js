@@ -23,7 +23,10 @@ app.get('/', (req, res) => {
 
 app.get('/search-hunters', (req, res) => {
     console.log('req received, query params: ', req.query)
-    handler(req).then((response) => res.send(response))
+    handler(req).then((response) => {
+        res.set({ 'Access-Control-Allow-Origin': '*' })
+        res.send(response)
+    })
 })
 
 app.listen(port, () => {

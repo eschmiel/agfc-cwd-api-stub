@@ -14,7 +14,7 @@ const { handler } = require('./src/stubLogic')
 const app = express()
 const port = 3000
 
-app.use(cors())
+// app.use(cors())
 
 app.get('/', (req, res) => {
     console.log('/ path activated ', req.query)

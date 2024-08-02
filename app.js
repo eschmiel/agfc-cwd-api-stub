@@ -21,7 +21,7 @@ const port = 3000
 app.use(function (request, response, next) {
     response.set({
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'authorization',
+        'Access-Control-Allow-Headers': 'authorization, priority',
         'Access-Control-Allow-Credentials': 'true'
     })
     next()

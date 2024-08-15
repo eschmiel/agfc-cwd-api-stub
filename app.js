@@ -32,7 +32,7 @@ app.use(function (request, response, next) {
 app.get('/search-hunters', (req, res) => {
     console.log('req received, query params: ', req.query)
     handler(req).then((response) => {
-        res.send(response)
+        res.status(500).send(response)
     })
 })
 
